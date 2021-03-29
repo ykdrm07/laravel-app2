@@ -16,18 +16,18 @@
 </ul>  
 </div>  
 @endif  
-<form action="{{route('user.signin')}}" method="POST">  
-@csrf  
-<div class="form-group">  
-<label for="email">E-Mail</label>  
-<input type="text" id="email" name="email" value="{{old('email')}}" class="form-control">  
-</div>  
-<div class="form-group">  
-<label for="password">Password</label>  
-<input type="password" id="password" name="password" value="{{old('password')}}" class="form-control">  
-</div>  
-<button type="submit" class="btn btn-primary">ログイン</button>  
-</form>  
+<form action="{{route('user.login')}}" method="POST">
+  @csrf
+  <div class="form-group">
+    <label for="email">E-Mail</label>
+    <input type="text" id="email" name="email" value="{{old('email')}}" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" value="{{old('password')}}" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">ログイン</button>
+</form>
 </div>  
 </div>  
 </div>  
