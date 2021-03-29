@@ -30,4 +30,12 @@ class UserController extends Controller
     // 認証成功
     return redirect()->route('micropost.index');
   }
+   /**
+  * ログアウト処理アクション
+  */
+ public function logout()
+ {
+   Auth::logout();
+   return redirect()->route('user.signin');
+ }
 }

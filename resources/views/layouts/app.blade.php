@@ -48,7 +48,7 @@
              </li>
            @else
              <li class="nav-item">
-                 <a class="nav-link" href="">{{ __('ホーム') }}</a>
+               <a class="nav-link" href="{{route('micropost.index')}}">{{ __('ホーム') }}</a>
              </li>
              <li class="nav-item">
                <a class="nav-link" href="">{{ __('ユーザ一覧') }}</a>
@@ -69,9 +69,9 @@
                    {{ __('ログアウト') }}
                  </a>
 
-                 <form id="logout-form" action="" method="POST" style="display: none;">
-                   @csrf
-                 </form>
+                 <form id="logout-form" action="{{route('user.logout')}}" method="POST" style="display: none;">
+                 @csrf
+                </form>
                </div>
              </li>
            @endguest
