@@ -44,7 +44,7 @@
                  <a class="nav-link" href="{{route('user.signin')}}">{{ __('ログイン') }}</a>
              </li>
              <li class="nav-item">
-                 <a class="nav-link" href="">{{ __('新規登録') }}</a>
+             <a class="nav-link" href="{{route('user.create')}}">{{ __('新規登録') }}</a>
              </li>
            @else
              <li class="nav-item">
