@@ -62,7 +62,7 @@
                </a>
 
                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item" href="">アカウント変更</a>
+               <a class="dropdown-item" href="{{route('user.edit', ['user' => Auth::user()->id])}}">アカウント変更</a>
                  <a class="dropdown-item" href=""
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
