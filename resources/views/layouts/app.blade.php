@@ -51,7 +51,7 @@
                <a class="nav-link" href="{{route('micropost.index')}}">{{ __('ホーム') }}</a>
              </li>
              <li class="nav-item">
-               <a class="nav-link" href="">{{ __('ユーザ一覧') }}</a>
+               <a class="nav-link" href="{{route('user.index')}}">{{ __('ユーザ一覧') }}</a>
              </li>
              <li class="nav-item">
                <a class="nav-link" href="">{{ __('投稿') }}</a>
