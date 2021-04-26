@@ -47,9 +47,9 @@
              <a class="nav-link" href="{{route('user.create')}}">{{ __('新規登録') }}</a>
              </li>
            @else
-             <li class="nav-item">
-               <a class="nav-link" href="{{route('micropost.index')}}">{{ __('ホーム') }}</a>
-             </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{route('micropost.index')}}">{{ __('ホーム') }}</a>
+            </li>
              <li class="nav-item">
                <a class="nav-link" href="{{route('user.index')}}">{{ __('ユーザ一覧') }}</a>
              </li>
@@ -71,7 +71,7 @@
 
                  <form id="logout-form" action="{{route('user.logout')}}" method="POST" style="display: none;">
                  @csrf
-                </form>
+                 </form>
                </div>
              </li>
            @endguest
