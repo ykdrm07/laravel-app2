@@ -54,6 +54,7 @@ class UserController extends Controller
  /**
   * ユーザ登録処理アクション
   */
+  
   public function store(UserRequest $request)
   {
     $user     = new User;
@@ -74,18 +75,19 @@ class UserController extends Controller
     return redirect()->route('micropost.index');
   }
 
-    /**
+ /**
   * ユーザ編集表示アクション
   */
   public function edit($id)
   {
-   $user       = User::find($id);
-   $viewParams = [
-     'user' => $user,
-   ];
-   $this->authorize('view', $user); # 追加
-   return view('user.edit', $viewParams);
+    $user       = User::find($id);
+    $viewParams = [
+      'user' => $user,
+    ];
+    $this->authorize('view', $user); # 追加
+    return view('user.edit', $viewParams);
   }
+
    /**
   * ユーザ更新アクション
   */
@@ -123,7 +125,7 @@ class UserController extends Controller
   }
 
 
-  /**
+   /**
    * ユーザ削除処理アクション
    */
   public function destroy($id)

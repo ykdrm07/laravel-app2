@@ -8,7 +8,17 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-  use Notifiable;
+   use Notifiable;
+
+   protected static function boot() 
+   {
+       parent::boot();
+       static::deleting(function($model) {
+           foreach ($model->microposts()->get() as $child) {
+               $child->delete();
+           }
+       });
+   }
 
   /**
    * ユーザの投稿データを取得
@@ -29,4 +39,13 @@ class User extends Authenticatable
       'password',
       'admin_flg', 
   ];
-}
+
+     /**
+    * ユーザ登録/更新
+    */
+    public function userSave($params)
+    {
+      $isRegist = $this->fill($params)->save();
+      return $isRegist;
+    }
+ }
