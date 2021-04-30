@@ -54,7 +54,7 @@
                <a class="nav-link" href="{{route('user.index')}}">{{ __('ユーザ一覧') }}</a>
              </li>
              <li class="nav-item">
-               <a class="nav-link" href="">{{ __('投稿') }}</a>
+               <a class="nav-link" href="{{route('micropost.input')}}">{{ __('投稿') }}</a>
              </li>
              <li class="nav-item dropdown">
                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
